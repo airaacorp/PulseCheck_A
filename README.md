@@ -29,39 +29,6 @@ The **SSD_VALIDATION** script is designed to automate the validation of NVMe SSD
 ---
 
 ## Features
-- **Endurance**: Simulate heavy workloads by performing both read and write operations on the SSD to validate its endurance. This test helps assess how well the SSD handles continuous read/write cycles and its longevity over time. It also provides metrics such as:
-    - **Total Bytes Written (TBW)**: The total amount of data written to the SSD over time.
-    - **Wear Leveling**: Tracks how evenly data is written across the SSD to prevent excessive wear on specific cells.
-    - **Data Retention**: Ensures that the drive maintains data integrity even after extended use.
-    - **Read/Write Performance**: Measures the SSD’s ability to handle both read and write operations under load, ensuring that performance does not degrade over time.
-
-- **File System Integrity**: Verify the integrity of the file system to ensure that the SSD handles data operations without errors. This test checks that the file system remains intact under various conditions and that no data corruption occurs during storage or      retrieval. Key aspects include:
-    - **File System Consistency**: Ensures that files are stored and retrieved correctly without corruption, even after unexpected shutdowns or power losses.
-    - **Data Integrity**: Verifies that data written to the SSD is preserved accurately, preventing silent data corruption that might go unnoticed in normal usage.
-    - **Error Detection**: Detects file system errors that might arise from underlying hardware issues, ensuring that the SSD performs reliably in a production environment.
-
-- **Health Monitoring**: Track the health of the SSD and predict potential failures using S.M.A.R.T. (Self-Monitoring, Analysis, and Reporting Technology) attributes. Key metrics include:
-    - **Temperature**: Monitors the operating temperature of the SSD to prevent overheating.
-    - **Bad Sectors**: Detects the presence of defective areas on the drive that could affect performance.
-    - **Remaining Life Expectancy**: Estimates how much longer the SSD will function optimally based on wear and usage patterns.
-
-- **Performance Benchmarking**: Benchmark the SSD's read and write performance under various workloads, such as sequential and random access patterns. This test provides detailed metrics like:
-    - **Throughput (MB/s)**: Measures the rate at which data can be read or written to the drive.
-    - **Latency**: Tracks the delay in accessing data on the SSD, which impacts overall performance.
-    - **IOPS (Input/Output Operations Per Second)**: Measures how many read/write operations the SSD can handle per second, which is crucial for high-performance applications.
-
-- **Power_Monitoring**: Monitor the power consumption of the SSD during testing to ensure optimal power efficiency. This test helps detect any abnormal power usage or spikes that could indicate potential hardware issues, such as a failing component. Key aspects include:
-    - **Power Consumption**: Measures the energy usage of the SSD during different workloads, ensuring that it operates within expected power ranges.
-    - **Power Spikes**: Detects sudden increases in power usage that might indicate issues like overheating or malfunctioning components.
-    - **Power Efficiency**: Assesses how efficiently the SSD consumes power during various operations, helping ensure that the drive is energy-efficient and suitable for environments where power consumption is a concern.
-
-- **Security**: Test the SSD’s security features to ensure that stored data is protected against unauthorized access. This includes:
-    - **Encryption**: Verifies whether the SSD supports hardware-based encryption (e.g., AES 256-bit) to protect stored data.
-    - **Secure Erase**: Tests the SSD’s ability to securely delete data, ensuring that deleted data cannot be recovered.
-    - **Password Protection**: Assesses whether the SSD supports password-based protection, preventing unauthorized access to the drive.
-    - **Data Sanitization**: Ensures that all data on the SSD can be securely wiped following industry standards, such as the DoD 5220.22-M method.
-    - **Tamper Protection**: Tests the ability of the SSD to resist physical tampering and ensure the security of data even if the drive is physically altered or removed.
-
 
 ---
 
