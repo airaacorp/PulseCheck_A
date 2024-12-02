@@ -1,0 +1,147 @@
+
+Software Bill of Materials (SBOM) Report
+Generated On: 2024-11-29
+
+---
+
+1. General Information
+
+- Application Name: NVMe SSD Validation Tool
+- Version: 1.0.0
+- Author: Vamsi Mikkili,Bhanu Prakash,Chakravarthi
+- Platform: Linux(Ubuntu)
+- Purpose: NVMe SSD
+            Health Monitoring Testing,
+            Performance Benchmarking,
+            PowerMonitoring Testing,
+            File System Integration Testing,
+            Endurance Testing,
+            Security Testing.
+---
+
+2. Components
+
+A. Python Standard Libraries
+
+1. os
+   - Description: Interfaces with the operating system.
+   - License: Python Software Foundation License.
+2. subprocess
+   - Description: Executes shell commands.
+   - License: Python Software Foundation License.
+3. getpass
+   - Description: Secure password input.
+   - License: Python Software Foundation License.
+
+B. External Libraries
+
+1. click
+   - Version: 8.1.3
+   - Description: Python package for creating command-line interfaces.
+   - License: BSD 3-Clause License.
+   - Source: https://pypi.org/project/click/
+
+C. Validation Tools
+
+HealthMonitoring
+
+1. smartctl (from smartmontools)
+   - Version: 7.4
+   - License: GPLv2.
+   - Description: A utility to monitor and manage SMART (Self-Monitoring, Analysis, and Reporting Technology) capabilities of storage devices.
+                  Provides diagnostics and health information..
+   - Source: https://www.smartmontools.org/
+
+2. nvme-cli
+   - Version: 2.8
+   - License: GPLv2.
+   - Description: A protocol and associated tools designed for high-performance communication between SSDs and CPUs over PCIe.
+                  Tools like nvme-cli provide commands for managing NVMe devices (e.g., health checks, firmware updates).
+   - Source: https://github.com/linux-nvme/nvme-cli
+
+D. Performance Tools
+
+1. fio
+   - Version: 3.35
+   - License: GPLv2.
+   - Description: A versatile and high-performance I/O workload generator and benchmark tool.
+                  It simulates various I/O patterns and reports performance metrics.
+   - Source: https://github.com/axboe/fio
+
+2. dd
+   - Version: GNU coreutils 8.32
+   - License: GPLv3.
+   - Description: A command-line utility to copy and convert data at a low level.
+                  Often used for disk cloning, benchmarking, and writing images to disks.
+   - Source: https://www.gnu.org/software/coreutils/
+
+3. ioping
+   - Version: 1.2
+   - License: GPLv3.
+   - Description: A simple tool to measure I/O latency in a manner similar to how ping measures network latency.
+                  Useful for diagnosing storage performance issues.
+   - Source: https://github.com/koct9i/ioping
+
+4. lm-sensors
+   - Version: 3.6
+   - License: GPL-2.0.
+   - Description: A hardware health monitoring package for Linux that provides information about temperature,
+                  voltage, fan speeds, and other sensor readings..
+   - Source: https://github.com/lm-sensors/lm-sensors
+
+5. fsck
+   - Version: 2.39.3
+   - License: GPL-3.0.
+   - Description: File system consistency check and repair tool for Linux-based systems,
+                  used for checking and repairing file system integrity.
+   - Source: https://www.kernel.org/doc/Documentation/filesystems/fsck.txt
+
+6. badblocks
+   - Version: 2.39.3
+   - License: GPL-3.0.
+   - Description: File system consistency check and repair tool for Linux-based systems,
+                  used for checking and repairing file system integrity.
+   - Source: https://www.kernel.org/doc/Documentation/filesystems/fsck.txt
+
+6. HdParm
+   - Version: 9.65
+   - License: GPL2.0.
+   - Description: hdparm is a command-line utility for setting and viewing hardware parameters of hard drives and SSDs,
+                  particularly for adjusting power settings, enabling/disabling caching, and tuning other drive settings.
+   - Source: https://github.com/Distrotech/hdparm
+
+7. shred
+   - Version: 9.4
+   - License: GPLv3.0.
+   - Description: shred is a utility for securely deleting files by overwriting them multiple times,
+                  making it harder to recover the original data. It is a part of the GNU core utilities package..
+   - Source: https://github.com/coreutils/coreutils
+
+---
+
+3. Dependencies
+- Python 3.8+: Required for script execution.
+- smartmontools
+- nvme-cli
+- fio
+- dd
+- ioping
+- shred
+- hdparm
+- badblocks
+- fsck
+- lm-sensors
+
+---
+
+4. Licensing Summary
+- GPLv2: Applies to smartctl, nvme-cli, fio, ioping.
+- GPLv3: Applies to dd.
+- BSD 3-Clause: Applies to click.
+- Python Software Foundation License: Applies to Python standard libraries.
+
+---
+
+5. Known Vulnerabilities
+- No known vulnerabilities for the listed versions at the time of this report.
+---
