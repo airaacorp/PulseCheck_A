@@ -16,12 +16,9 @@ This script automates the process of validating NVMe SSDs by running a series of
     - [Performance_Benchmarking](#performance_benchmarking)
     - [Power_Monitoring](#power_monitoring)
     - [Security](#security)
-5. [Shared_Components](#Shared_Components)
-    - [Logging](#Logging)
-    - [Utilities](#Utilities)
-6. [Results_and_Outputs](#results_and_Outputs)
+5. [Results_and_Outputs](#results_and_Outputs)
     - [SSD_Test_Results](#SSD_Test_Results)
-7. [License](#License)
+6. [License](#License)
 
 ---
 
