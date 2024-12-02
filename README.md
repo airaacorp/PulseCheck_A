@@ -30,6 +30,13 @@ The **SSD_VALIDATION** script is designed to automate the validation of NVMe SSD
 
 ## Features
 
+- **Endurance Testing**: Simulates prolonged workloads to evaluate SSD longevity and durability.
+- **File System Integrity**: Verifies data consistency and resilience under various conditions.
+- **Health Monitoring**: Tracks critical SSD health metrics like temperature and bad sectors.
+- **Performance Benchmarking**: Measures read/write speed, latency, and IOPS.
+- **Power Monitoring**: Evaluates energy efficiency and detects abnormal power usage.
+- **Security**: Tests encryption, secure erasure, and tamper resistance.
+
 ---
 
 ## Repository
