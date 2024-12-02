@@ -51,10 +51,10 @@ The Validation process is designed to thoroughly test various aspects of the NVM
 
 ### **Endurance**
 This test simulates continuous read and write operations to assess the SSD’s durability and endurance under extended workloads. It measures critical metrics such as Total Bytes Written (TBW) and tracks wear leveling to ensure that the SSD does not wear out prematurely.It also provides metrics such as:
-    - **Total Bytes Written (TBW)**: The total amount of data written to the SSD over time.
-    - **Wear Leveling**: Tracks how evenly data is written across the SSD to prevent excessive wear on specific cells.
-    - **Data Retention**: Ensures that the drive maintains data integrity even after extended use.
-    - **Read/Write Performance**: Measures the SSD’s ability to handle both read and write operations under load, ensuring that performance does not degrade over time.
+- **Total Bytes Written (TBW)**: The total amount of data written to the SSD over time.
+- **Wear Leveling**: Tracks how evenly data is written across the SSD to prevent excessive wear on specific cells.
+- **Data Retention**: Ensures that the drive maintains data integrity even after extended use.
+- **Read/Write Performance**: Measures the SSD’s ability to handle both read and write operations under load, ensuring that performance does not degrade over time.
 
 - **Tools**: `fio`, `stress-ng`
 - **Basic Command**:
@@ -66,9 +66,9 @@ This test simulates continuous read and write operations to assess the SSD’s d
 
 ### **File_System_integrity**
 Validates that the SSD reliably handles file system operations without errors. This includes checking for file system consistency, error detection, and ensuring that the SSD does not corrupt data.Key aspects include:
-    - **File System Consistency**: Ensures that files are stored and retrieved correctly without corruption, even after unexpected shutdowns or power losses.
-    - **Data Integrity**: Verifies that data written to the SSD is preserved accurately, preventing silent data corruption that might go unnoticed in normal usage.
-    - **Error Detection**: Detects file system errors that might arise from underlying hardware issues, ensuring that the SSD performs reliably in a production environment.
+- **File System Consistency**: Ensures that files are stored and retrieved correctly without corruption, even after unexpected shutdowns or power losses.
+- **Data Integrity**: Verifies that data written to the SSD is preserved accurately, preventing silent data corruption that might go unnoticed in normal usage.
+- **Error Detection**: Detects file system errors that might arise from underlying hardware issues, ensuring that the SSD performs reliably in a production environment.
 
 - **Tools**: `fsck`, `badblocks`
 - **Basic Commands**:
@@ -81,9 +81,9 @@ Validates that the SSD reliably handles file system operations without errors. T
 
 ### **Health_Monitoring**
 Tracks the health of the SSD using S.M.A.R.T. data, including temperature, bad sectors, and the remaining life expectancy of the drive. This helps detect potential failures before they happen.Key metrics include:
-    - **Temperature**: Monitors the operating temperature of the SSD to prevent overheating.
-    - **Bad Sectors**: Detects the presence of defective areas on the drive that could affect performance.
-    - **Remaining Life Expectancy**: Estimates how much longer the SSD will function optimally based on wear and usage patterns.
+- **Temperature**: Monitors the operating temperature of the SSD to prevent overheating.
+- **Bad Sectors**: Detects the presence of defective areas on the drive that could affect performance.
+- **Remaining Life Expectancy**: Estimates how much longer the SSD will function optimally based on wear and usage patterns.
 
 - **Tools**: `smartctl`, `nvme-cli`
 - **Basic Commands**:
@@ -96,9 +96,9 @@ Tracks the health of the SSD using S.M.A.R.T. data, including temperature, bad s
 
 ### **Performance_Benchmarking**
 Measures the SSD’s performance through various read/write tests, providing metrics like throughput, latency, and IOPS to assess its speed and efficiency.his test provides detailed metrics like:
-    - **Throughput (MB/s)**: Measures the rate at which data can be read or written to the drive.
-    - **Latency**: Tracks the delay in accessing data on the SSD, which impacts overall performance.
-    - **IOPS (Input/Output Operations Per Second)**: Measures how many read/write operations the SSD can handle per second, which is crucial for high-performance applications.
+- **Throughput (MB/s)**: Measures the rate at which data can be read or written to the drive.
+- **Latency**: Tracks the delay in accessing data on the SSD, which impacts overall performance.
+- **IOPS (Input/Output Operations Per Second)**: Measures how many read/write operations the SSD can handle per second, which is crucial for high-performance applications.
 
 - **Tools**: `fio`, `dd`, `ioping`
 - **Basic Commands**:
@@ -112,9 +112,9 @@ Measures the SSD’s performance through various read/write tests, providing met
 
 ### **Power_Monitoring**
 Monitors power consumption during SSD testing to ensure the drive operates efficiently. Detects abnormal power usage or spikes that could indicate hardware problems. Key aspects include:
-    - **Power Consumption**: Measures the energy usage of the SSD during different workloads, ensuring that it operates within expected power ranges.
-    - **Power Spikes**: Detects sudden increases in power usage that might indicate issues like overheating or malfunctioning components.
-    - **Power Efficiency**: Assesses how efficiently the SSD consumes power during various operations, helping ensure that the drive is energy-efficient and suitable for environments where power consumption is a concern.
+- **Power Consumption**: Measures the energy usage of the SSD during different workloads, ensuring that it operates within expected power ranges.
+- **Power Spikes**: Detects sudden increases in power usage that might indicate issues like overheating or malfunctioning components.
+- **Power Efficiency**: Assesses how efficiently the SSD consumes power during various operations, helping ensure that the drive is energy-efficient and suitable for environments where power consumption is a concern.
 
 - **Tools**: `lm-sensors`, `nvme-cli`
 - **Basic Command**:
@@ -126,11 +126,11 @@ Monitors power consumption during SSD testing to ensure the drive operates effic
 
 ### **Security**
 Validates the SSD’s security features, including encryption, secure erasure, and tamper protection. Ensures that the SSD can protect sensitive data through built-in security features. This includes:
-    - **Encryption**: Verifies whether the SSD supports hardware-based encryption (e.g., AES 256-bit) to protect stored data.
-    - **Secure Erase**: Tests the SSD’s ability to securely delete data, ensuring that deleted data cannot be recovered.
-    - **Password Protection**: Assesses whether the SSD supports password-based protection, preventing unauthorized access to the drive.
-    - **Data Sanitization**: Ensures that all data on the SSD can be securely wiped following industry standards, such as the DoD 5220.22-M method.
-    - **Tamper Protection**: Tests the ability of the SSD to resist physical tampering and ensure the security of data even if the drive is physically altered or removed.
+- **Encryption**: Verifies whether the SSD supports hardware-based encryption (e.g., AES 256-bit) to protect stored data.
+- **Secure Erase**: Tests the SSD’s ability to securely delete data, ensuring that deleted data cannot be recovered.
+- **Password Protection**: Assesses whether the SSD supports password-based protection, preventing unauthorized access to the drive.
+- **Data Sanitization**: Ensures that all data on the SSD can be securely wiped following industry standards, such as the DoD 5220.22-M method.
+- **Tamper Protection**: Tests the ability of the SSD to resist physical tampering and ensure the security of data even if the drive is physically altered or removed.
 
 - **Tools**: `nvme-cli`, `hdparm`, `shred`
 - **Basic Commands**:
